@@ -74,6 +74,36 @@ add below
 	$endif
 ```
 
+if bash >= 4.3 and readline >= 6.3, try use below .inputrc.
+
+To view the readline version, using below method [from stackflow](https://superuser.com/questions/1169740/how-do-i-determine-what-version-of-readline-bash-is-using):
+
+```bash
+	$ gdb bash
+	(gdb) print /x (int) rl_readline_version
+	$1 = 0x700
+```
+
+```
+	set editing-mode vi
+	$if mode=vi
+
+	set keymap vi-commandgg
+	# these are for vi-command mode
+	Control-l: clear-screen
+
+	set keymap vi-insert
+	# these are for vi-insert mode
+	Control-l: clear-screen
+	Control-k: clear-screen
+
+	set show-mode-in-prompt on
+
+	set vi-ins-mode-string "+"
+	set vi-cmd-mode-string ":"
+
+	$endif
+```
 
 ### dotfile
 
