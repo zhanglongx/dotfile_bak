@@ -114,24 +114,20 @@ To view the readline version, using below method [from stackflow](https://superu
 
 ## OS
 
-1. if computer is used in rd, /etc/apt/sources.list: (support ubuntu 16.04 18.04)
-
-	`http://192.165.153.66/mirror/mirrors.163.com/ubuntu/`
-
-2. install packages:
+1. install packages:
 
 	`sudo apt install -y openssh-server vim`
 
-3. /etc/ssh/sshd_config:
+2. /etc/ssh/sshd_config:
 
 		ClientAliveInterval 30
 
 		ClientAliveCountMax 6
 
-4. ~/ssh/authorized_keys:
+3. ~/ssh/authorized_keys:
 
 	`ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJeSq1iTJFVYZN2nrp4fZNcDoBROEG/CQ7WNZ9YMzjOH7yD4dsVdCWwC8gb2jSW3dysZOIonD2tFVF0P+lS1UBJZzwrvE9rALPp9eA2/Chx5DjBlVFlmzLw8jfIHCoEZO0mNzg8XGOZXl2TNxLl8wfuwvRqVTCgMvSq4iac4HkMRzy5uIVc1EFpbyxafSea1Jj4yuNge6buEwx1AYwiPAbi1MUGKrn4/RT0xDU/ZCttB85xysm8er6ji3+3ujHU+aqqtcjYu1vIL3sTh0tQ0w2lZ1beTcRusCDhBVfNR4Xe+VScHf73lYM50c8ToCc6sh2oY4qkRMxJRMVSYpNk8Iz zhlx@zhlx-i7-7700`
 
-5. (Not Recommend)if computer is a vm, /etc/fstab:
+4. (Not Recommend)if computer is a vm, /etc/fstab:
 
 	`vmhgfs-fuse	/mnt/hgfs	fuse	defaults,allow_other	0	0`
